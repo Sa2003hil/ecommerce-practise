@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.font{
+    font-family: 'Open Sans', sans-serif;
+}
+.card-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-content {
+    z-index: 99999;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white; /* Adjust as needed */
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+    height: 64%; /* Adjust to desired height */
+    width: 90%;
+    margin-left: 16px;
+}
+
+
+.card-container:hover .hover-content {
+    transform: translateY(-1%);
+}
+
+.hover-inner {
+    height: 100%; /* Ensure the content fills the height of the hover div */
+    overflow: hidden;
+}
