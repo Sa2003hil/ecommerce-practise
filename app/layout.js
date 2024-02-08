@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         referrerpolicy="no-referrer"
       />
       <body className={inter.className}>
-        <div className=" p-4 bg-white fixed w-full z-[99999] ">
+        <div className=" p-4 bg-white shadow-lg fixed w-full z-[99999] ">
           <Navbar />
         </div>
 
