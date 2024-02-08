@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 
 
         {children}
-        <section className='bg-black rounded-t-[4rem]  padding-x padding-t pb-8'>
+        <section className='bg-[#0067ff] rounded-t-[4rem]  padding-x padding-t pb-8'>
           <Footer />
         </section>
 
