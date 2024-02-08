@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Cards } from "./components/Cards/Cards";
-import Navbar from './components/Navbar/index'
+import { Cards } from "../components/Cards/Cards";
+
 
 export default function Home() {
   return (

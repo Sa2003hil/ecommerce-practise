@@ -18,9 +18,11 @@ import model3 from '../../assets/images/asset 19.png'
 import model4 from '../../assets/images/asset 24.png'
 import model5 from '../../assets/images/asset 16.png'
 import model6 from '../../assets/images/asset 13.png'
+import { IoBagHandleOutline } from "react-icons/io5";
 
 export function Cards() {
     const [isHovered, setIsHovered] = useState(false);
+    const [isHoveredIcon, setIsHoveredIcon] = useState(false);
     return (
         <div className="card-container shadow-2xl" onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}>
@@ -90,7 +92,7 @@ export function Cards() {
                         </Button>
                     </CardFooter> */}
                 </div>
-                <div className="hover-content rounded-xl mr-2 ml-2 ">
+                <div className="hover-content rounded-xl mr-2 ml-2 z-0 ">
                     <div className="hover-inner flex flex-col justify-center items-center gap-4  ">
                         <p className="font-medium font mt-4 text-center hover:text-[#0067ff] hover:cursor-pointer ">Loose Padet Jacket</p>
                         <div className="flex gap-2">
@@ -114,7 +116,16 @@ export function Cards() {
                             <button className="border-gray-400 border-[1px] rounded-lg p-[3px] w-9 h-6 text-center m-auto flex justify-center items-center hover:shadow-xl hover:border-[#0067ff]">M</button>
                             <button className="border-gray-400 border-[1px] rounded-lg p-[3px] w-9 h-6 text-center m-auto flex justify-center items-center hover:shadow-xl hover:border-[#0067ff]">XL</button>
                         </div>
-                        <Button className=" bg-[#0067ff] rounded-full text-white hover:bg-black hover:text-white ">{`${isHovered}:'Add to Card'? 'Added`}</Button>
+                        <Button className=" bg-[#0067ff] rounded-full text-white hover:transition-all hover:ease-in hover:1.2s hover:bg-black hover:text-white "
+                            onMouseEnter={() => setIsHoveredIcon(true)}
+                            onMouseLeave={() => setIsHoveredIcon(false)}
+
+                        >
+                            {isHoveredIcon ? <IoBagHandleOutline className="w-24" size={20} /> : null}
+                            {isHoveredIcon ? null : 'Add to Cart'}
+
+
+                        </Button>
                         {/* <button className=" bg-gray-300 p-3 rounded-full uppercase font-medium text-[12px] "> Subscribe & save 25% </button> */}
                     </div>
                 </div>
